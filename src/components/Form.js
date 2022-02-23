@@ -41,6 +41,7 @@ export const Form = () => {
   const minuteChange = (e) => {
     setMinute(() => e.target.value)
   }
+
   const submit = () => {
     alert("submitボタンが押されました。");
     console.log(year, month, date, hour, minute)
