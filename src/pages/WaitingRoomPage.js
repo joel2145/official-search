@@ -14,18 +14,22 @@ export const WaitingRoomPage = (props) => {
 
   // zoomに入る関数
   const exec = require('child_process').exec;
-  const EnterTheRoom = () => exec(`open 'zoommtg://zoom.us/join?confno=${meetingID}&pwd=${passcode}'`, (error, stdout, stderr) => {
-    if (error) {
-      console.log(error);
-      console.log(stderr);
-    }
-    console.log(stdout);
-  });
+  const EnterTheRoom = () => {
+    console.log(meetingID)
+    exec(`open 'zoommtg://zoom.us/join?confno=${meetingID}&pwd=${passcode}'`, (error, stdout, stderr) => {
+      if (error) {
+        console.log(error);
+        console.log(stderr);
+      }
+      console.log(stdout);
+    })
+  };
 
   // 授業開始時間になったら自動的にzoomへ入る関数
-  const AutoZoomEnter = () => {
+  // const AutoZoomEnter = () => {
 
-  }
+  // }
+
   return (
     <>
       <div>WaitingRoomPage</div>
@@ -37,6 +41,7 @@ export const WaitingRoomPage = (props) => {
       <p>{`パスコード:${passcode}`}</p>
       <br />
       <p>{`授業開始時刻までお待ち下さい。`}</p>
+      <button onClick={() => EnterTheRoom()}> テスト</button>
     </>
   );
 };
