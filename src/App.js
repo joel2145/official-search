@@ -1,15 +1,18 @@
 import React from "react"
+import { BrowserRouter as Router, Route, Routes, } from "react-router-dom";
 
-import { Form } from "../src/components/Form"
+import { FormPage } from "./pages/FormPage"
+import { WaitingRoomPage } from "./pages/WaitingRoomPage"
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>AutoZoomEnter</h1>
-      <Form></Form>
-
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<FormPage />}></Route>
+        <Route exact path="/waitting" element={<WaitingRoomPage />}></Route>
+      </Routes>
+    </Router>
   );
 }
 

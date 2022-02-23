@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const MTGSetting = (props) => {
+export const WaitingRoomPage = (props) => {
   return (
     <>
-      <div> MTGSettingコンポーネントです。</div>
+      <div>WaitingRoomPage</div>
       <div> {props.meetingID}</div>
       <div> {props.passcode}</div>
     </>

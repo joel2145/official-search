@@ -7,12 +7,18 @@ import {
   Select,
   Grid, GridItem
 } from '@chakra-ui/react'
-
-import { MTGSetting } from "../components/MTGSetting"
+import { useNavigate } from "react-router-dom";
 
 export const Form = () => {
+  const navigate = useNavigate();
+
   const [meetingID, setMeetingID] = useState('')
   const [passcode, setPasscode] = useState('')
+  const [year, setYear] = useState('')
+  const [month, setMonth] = useState('')
+  const [date, setDate] = useState('')
+  const [hour, setHour] = useState('')
+  const [minute, setMinute] = useState('')
 
   const meetingIDChange = (e) => {
     setMeetingID(() => e.target.value)
@@ -20,7 +26,26 @@ export const Form = () => {
   const passcodeChange = (e) => {
     setPasscode(() => e.target.value)
   }
-
+  const yearChange = (e) => {
+    setYear(() => e.target.value)
+  }
+  const monthChange = (e) => {
+    setMonth(() => e.target.value)
+  }
+  const dateChange = (e) => {
+    setDate(() => e.target.value)
+  }
+  const hourChange = (e) => {
+    setHour(() => e.target.value)
+  }
+  const minuteChange = (e) => {
+    setMinute(() => e.target.value)
+  }
+  const submit = () => {
+    alert("submitボタンが押されました。");
+    console.log(year, month, date, hour, minute)
+    navigate('/waitting');
+  }
 
   return (
     <>
@@ -36,39 +61,38 @@ export const Form = () => {
         <Grid templateColumns='repeat(5, 1fr)' gap={6}>
           <GridItem w='100%' h='10' bg='' >
             <FormLabel htmlFor=''>年</FormLabel>
-            <Select placeholder=''>
-              <option value='option1'>2022</option>
-              <option value='option2'>2023</option>
+            <Select placeholder='' onChange={yearChange}>
+              <option value={2022}>2022</option>
+              <option value={2023}>2023</option>
             </Select>
           </GridItem>
           <GridItem w='100%' h='10' bg='' >
             <FormLabel htmlFor=''>月</FormLabel>
-            <Select placeholder='' color="" border="black" >
-              {[...Array(12)].map((_, i) => i + 1).map((value) => <option value='option1' key={value}>{value}</option>)}
+            <Select placeholder='' color="" onChange={monthChange}>
+              {[...Array(12)].map((_, i) => i + 1).map((value) => <option value={value} key={value}>{value}</option>)}
             </Select>
           </GridItem>
           <GridItem w='100%' h='10' bg='' >
             <FormLabel htmlFor=''>日付</FormLabel>
-            <Select placeholder=''>
-              {[...Array(31)].map((_, i) => i + 1).map((value) => <option value='option1' key={value}>{value}</option>)}
+            <Select placeholder='' onChange={dateChange}>
+              {[...Array(31)].map((_, i) => i + 1).map((value) => <option value={value} key={value}>{value}</option>)}
             </Select>
           </GridItem>
           <GridItem w='100%' h='10' bg='' >
             <FormLabel htmlFor=''>時</FormLabel>
-            <Select placeholder=''>
-              {[...Array(24)].map((_, i) => i + 1).map((value) => <option value='option1' key={value}>{value}</option>)}
+            <Select placeholder='' onChange={hourChange}>
+              {[...Array(24)].map((_, i) => i + 1).map((value) => <option value={value} key={value}>{value}</option>)}
             </Select>
           </GridItem>
           <GridItem w='100%' h='10' bg='' >
             <FormLabel htmlFor=''>分</FormLabel>
-            <Select placeholder=''>
-              {[...Array(60)].map((_, i) => i).map((value) => <option value='option1' key={value}>{value}</option>)}
+            <Select placeholder='' onChange={minuteChange}>
+              {[...Array(60)].map((_, i) => i).map((value) => <option value={value} key={value}>{value}</option>)}
             </Select>
           </GridItem>
         </Grid>
       </FormControl>
-      <Button onClick={() => alert("ボタンが押されました")} colorScheme='teal' size='md' marginTop="20" marginRight="100" marginLeft="100">zoom授業を設定</Button>
-      <MTGSetting meetingID={meetingID} passcode={passcode}></MTGSetting>
+      <Button onClick={() => submit()} colorScheme='teal' size='md' marginTop="20" marginRight="100" marginLeft="100">zoom授業を設定</Button>
     </>
   )
 }
