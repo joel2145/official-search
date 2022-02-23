@@ -52,7 +52,7 @@ export const Form = () => {
     <>
       <FormControl>
 
-        <FormLabel htmlFor=''>ミーティングID</FormLabel>
+        <FormLabel htmlFor=''>zoomミーティングのID</FormLabel>
         <Input id='zoomID' type='number' placeholder='例 718 8545 7059' size='md' value={meetingID} onChange={meetingIDChange} />
 
         <FormLabel htmlFor=''>パスコード</FormLabel>
