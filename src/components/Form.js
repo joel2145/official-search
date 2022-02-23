@@ -44,9 +44,12 @@ export const Form = () => {
 
   const submit = () => {
     alert("submitボタンが押されました。");
-    console.log(year, month, date, hour, minute)
-    navigate('/waitting');
+    // console.log(year, month, date, hour, minute)
+    navigate("/waitting", { state: { year: year, month: month, date: date, hour: hour, minute: minute } })
   }
+
+  // var select = document.getElementById("year");
+  // select.options[0].selected = true;
 
   return (
     <>
@@ -62,8 +65,8 @@ export const Form = () => {
         <Grid templateColumns='repeat(5, 1fr)' gap={6}>
           <GridItem w='100%' h='10' bg='' >
             <FormLabel htmlFor=''>年</FormLabel>
-            <Select placeholder='' onChange={yearChange}>
-              <option value={2022}>2022</option>
+            <Select placeholder='' onChange={yearChange} id="year">
+              <option value={2022} selected="selected">2022</option>
               <option value={2023}>2023</option>
             </Select>
           </GridItem>
