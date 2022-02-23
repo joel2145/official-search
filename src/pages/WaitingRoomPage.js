@@ -5,14 +5,12 @@ export const WaitingRoomPage = (props) => {
   // console.log(year)
   const location = useLocation();
   console.log(location)
+  const { year, month, date, hour, minute } = { ...location.state }
   return (
     <>
       <div>WaitingRoomPage</div>
-      <div>{location.state.year}</div>
-      <div>{location.state.month}</div>
-      <div>{location.state.date}</div>
-      <div>{location.state.hour}</div>
-      <div>{location.state.minute}</div>
+      <p>{`${year}年 ${month}月${date}日 ${hour}時${minute}分に入室の設定をしました。`}</p>
+      <p>{`授業開始時刻までお待ち下さい。`}</p>
     </>
   );
 };

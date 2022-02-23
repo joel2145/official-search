@@ -14,11 +14,11 @@ export const Form = () => {
 
   const [meetingID, setMeetingID] = useState('')
   const [passcode, setPasscode] = useState('')
-  const [year, setYear] = useState('')
-  const [month, setMonth] = useState('')
-  const [date, setDate] = useState('')
-  const [hour, setHour] = useState('')
-  const [minute, setMinute] = useState('')
+  const [year, setYear] = useState(2022)
+  const [month, setMonth] = useState(1)
+  const [date, setDate] = useState(1)
+  const [hour, setHour] = useState(1)
+  const [minute, setMinute] = useState(0)
 
   const meetingIDChange = (e) => {
     setMeetingID(() => e.target.value)
@@ -48,9 +48,6 @@ export const Form = () => {
     navigate("/waitting", { state: { year: year, month: month, date: date, hour: hour, minute: minute } })
   }
 
-  // var select = document.getElementById("year");
-  // select.options[0].selected = true;
-
   return (
     <>
       <FormControl>
@@ -66,8 +63,8 @@ export const Form = () => {
           <GridItem w='100%' h='10' bg='' >
             <FormLabel htmlFor=''>年</FormLabel>
             <Select placeholder='' onChange={yearChange} id="year">
-              <option value={2022} selected="selected">2022</option>
-              <option value={2023}>2023</option>
+              <option value={2022} >2022</option>
+              <option value={2023} >2023</option>
             </Select>
           </GridItem>
           <GridItem w='100%' h='10' bg='' >
@@ -85,7 +82,7 @@ export const Form = () => {
           <GridItem w='100%' h='10' bg='' >
             <FormLabel htmlFor=''>時</FormLabel>
             <Select placeholder='' onChange={hourChange}>
-              {[...Array(24)].map((_, i) => i + 1).map((value) => <option value={value} key={value}>{value}</option>)}
+              {[...Array(24)].map((_, i) => i).map((value) => <option value={value} key={value}>{value}</option>)}
             </Select>
           </GridItem>
           <GridItem w='100%' h='10' bg='' >
