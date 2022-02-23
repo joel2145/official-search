@@ -43,9 +43,7 @@ export const Form = () => {
   }
 
   const submit = () => {
-    alert("submitボタンが押されました。");
-    // console.log(year, month, date, hour, minute)
-    navigate("/waitting", { state: { year: year, month: month, date: date, hour: hour, minute: minute } })
+    navigate("/waitting", { state: { meetingID: meetingID, passcode: passcode, year: year, month: month, date: date, hour: hour, minute: minute } })
   }
 
   return (
@@ -57,7 +55,7 @@ export const Form = () => {
 
         <FormLabel htmlFor=''>パスコード</FormLabel>
         <Input id='passcode' type='text' placeholder='例 8a1SZu' size='md' value={passcode} onChange={passcodeChange} />
-
+        <br />
         <FormLabel htmlFor=''>授業開始時刻</FormLabel>
         <Grid templateColumns='repeat(5, 1fr)' gap={6}>
           <GridItem w='100%' h='10' bg='' >
