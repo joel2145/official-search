@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import {
   FormControl,
   FormLabel,
-  // FormErrorMessage,
   Input,
   Button,
   Select,
   Grid, GridItem
 } from '@chakra-ui/react'
+
+import { MTGSetting } from "../components/MTGSetting"
 
 export const Form = () => {
   const [meetingID, setMeetingID] = useState('')
@@ -67,6 +68,7 @@ export const Form = () => {
         </Grid>
       </FormControl>
       <Button onClick={() => alert("ボタンが押されました")} colorScheme='teal' size='md' marginTop="20" marginRight="100" marginLeft="100">zoom授業を設定</Button>
+      <MTGSetting meetingID={meetingID} passcode={passcode}></MTGSetting>
     </>
   )
 }
