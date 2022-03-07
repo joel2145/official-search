@@ -13,9 +13,9 @@ export const SearchPage = () => {
   const [searchWord, setSearchWord] = useState('')
 
   // const [url, setUrl] = useState(`https://www.google.com/search?q=site%3Aac.jp+OR+site%3Ago.jp+OR+site%3Alg.jp+${searchWord}`)
-  const [go, setGo] = useState('')
-  const [ac, setAc] = useState('')
-  const [lg, setLg] = useState('')
+  const [go, setGo] = useState("+OR+site%3Ago.jp")
+  const [ac, setAc] = useState("+OR+site%3Aac.jp")
+  const [lg, setLg] = useState("+OR+site%3Alg.jp")
 
   const searchWordChange = (e) => {
     setSearchWord(() => e.target.value)
@@ -54,16 +54,16 @@ export const SearchPage = () => {
       <FormControl>
         <FormLabel htmlFor=''>検索したいワードを入力してください</FormLabel>
         <Input id='searchWord' type='search' placeholder='例) 新型コロナウイルス' size='md' value={searchWord} onChange={searchWordChange} />
-        <FormLabel as='legend'>検索する範囲を絞る</FormLabel>
+        <FormLabel as='legend'>検索する範囲を選択</FormLabel>
 
         <Stack spacing={5} direction='row'>
-          <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" checked={goChange}>
+          <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked>
             日本の政府機関（厚生労働省・内閣官房など）
           </Checkbox>
-          <Checkbox colorScheme='green' onChange={acChange} value="ac.jp" id="ac" checked={acChange}>
+          <Checkbox colorScheme='green' onChange={acChange} value="ac.jp" id="ac" defaultChecked>
             日本の高等教育機関（大学など）
           </Checkbox>
-          <Checkbox colorScheme='green' onChange={lgChange} value="lg.jp" id="lg" checked={lgChange}>
+          <Checkbox colorScheme='green' onChange={lgChange} value="lg.jp" id="lg" defaultChecked>
             地方公共団体
           </Checkbox>
         </Stack>
