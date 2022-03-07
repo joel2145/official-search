@@ -7,12 +7,32 @@
 }
 
 .box {
-  background-color: aquamarine;
+  // background-color: aquamarine;
   width: 70%;
   height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.submitButton {
+  display: flex;
+  // width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.text {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.textBox {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  // text-align: center;
 }
 
 // .contents {

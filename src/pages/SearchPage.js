@@ -56,14 +56,14 @@ export const SearchPage = () => {
       <div className={classes.container}>
         <div className={classes.box}>
           <FormControl className={classes.contents}>
-            <h1>Official Search App</h1>
-            <FormLabel htmlFor=''>検索したいワードを入力してください</FormLabel>
-            <Input id='searchWord' type='search' placeholder='例) 新型コロナウイルス' size='md' value={searchWord} onChange={searchWordChange} />
+            <h1 className={classes.text}>Official Search App</h1>
+            <FormLabel htmlFor='' className={classes.text}>検索したいワードを入力してください</FormLabel>
+            <Input id='searchWord' type='search' placeholder='例) 新型コロナウイルス' size='md' value={searchWord} onChange={searchWordChange} className={classes.textBox} />
 
-            <Button onClick={() => submit()} colorScheme='blue' size='md' marginTop="10" marginBottom="10" >信頼できる情報を検索</Button>
+            <Button onClick={() => submit()} colorScheme='blue' size='md' marginTop="10" marginBottom="10" className={classes.submitButton}>信頼できる情報を検索</Button>
 
-            <FormLabel as='legend'>検索する範囲を選択</FormLabel>
-            <Stack spacing={5} direction='row'>
+            <FormLabel as='legend' className={classes.text}>検索する範囲を選択</FormLabel>
+            <Stack spacing={5} direction='row' className={classes.text}>
               <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked>
                 日本の政府機関（厚生労働省・内閣官房など）
               </Checkbox>
