@@ -12,7 +12,6 @@ export const SearchPage = () => {
 
   const [searchWord, setSearchWord] = useState('')
 
-  const [checkedItems, setCheckedItems] = useState({})
   // const [url, setUrl] = useState(`https://www.google.com/search?q=site%3Aac.jp+OR+site%3Ago.jp+OR+site%3Alg.jp+${searchWord}`)
   const [go, setGo] = useState('')
   const [ac, setAc] = useState('')
@@ -21,8 +20,6 @@ export const SearchPage = () => {
   const searchWordChange = (e) => {
     setSearchWord(() => e.target.value)
   }
-  console.log(checkedItems)
-
   const goChange = (e) => {
     setGo("+OR+site%3Ago.jp")
   }
