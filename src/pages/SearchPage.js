@@ -56,13 +56,13 @@ export const SearchPage = () => {
       <div className={classes.container}>
         <div className={classes.box}>
           <FormControl className={classes.contents}>
-            <h1 className={classes.text}>Official Search App</h1>
-            <FormLabel htmlFor='' className={classes.text}>検索したいワードを入力してください</FormLabel>
-            <Input id='searchWord' type='search' placeholder='例) 新型コロナウイルス' size='md' value={searchWord} onChange={searchWordChange} className={classes.textBox} />
+            <h1 className={classes.title}>Official Search App</h1>
+            <p className={classes.subtitle}>これは信頼できる情報のみを検索するアプリです</p>
+            <Input id='searchWord' type='search' placeholder='例) ウクライナ' size='md' value={searchWord} onChange={searchWordChange} className={classes.textBox} />
 
-            <Button onClick={() => submit()} colorScheme='blue' size='md' marginTop="10" marginBottom="10" className={classes.submitButton}>信頼できる情報を検索</Button>
+            <Button onClick={() => submit()} colorScheme='blue' size='md' marginTop="2" marginBottom="10" className={classes.submitButton}>信頼できる情報を検索</Button>
 
-            <FormLabel as='legend' className={classes.text}>検索する範囲を選択</FormLabel>
+            <p className={classes.selectText} >検索する範囲を選択</p>
             <Stack spacing={5} direction='row' className={classes.text}>
               <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked>
                 日本の政府機関（厚生労働省・内閣官房など）
