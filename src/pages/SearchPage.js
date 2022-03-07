@@ -21,13 +21,28 @@ export const SearchPage = () => {
     setSearchWord(() => e.target.value)
   }
   const goChange = (e) => {
-    setGo("+OR+site%3Ago.jp")
+    if (go === "") {
+      setGo("+OR+site%3Ago.jp")
+    }
+    if (go === "+OR+site%3Ago.jp") {
+      setGo("")
+    }
   }
   const acChange = (e) => {
-    setAc("+OR+site%3Aac.jp")
+    if (ac === "") {
+      setAc("+OR+site%3Aac.jp")
+    }
+    if (ac === "+OR+site%3Aac.jp") {
+      setAc("")
+    }
   }
   const lgChange = (e) => {
-    setLg("+OR+site%3Alg.jp")
+    if (lg === "") {
+      setLg("+OR+site%3Alg.jp")
+    }
+    if (lg === "+OR+site%3Alg.jp") {
+      setLg("")
+    }
   }
 
   const submit = () => {
