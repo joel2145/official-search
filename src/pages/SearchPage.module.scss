@@ -53,6 +53,14 @@
   // text-align: center;
 }
 
+.checkList {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-left: 50%;
+}
+
 .contents {
   display: flex;
   flex-direction: column;

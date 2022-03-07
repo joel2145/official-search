@@ -62,7 +62,7 @@ export const SearchPage = () => {
             <Button onClick={() => submit()} colorScheme='blue' size='md' marginTop="2" marginBottom="10" className={classes.submitButton}>信頼できる情報を検索</Button>
 
             <p className={classes.selectText} >検索する範囲を選択</p>
-            <Stack spacing={5} direction='row' className={classes.text}>
+            <Stack spacing={5} direction='column' className={classes.checkList}>
               <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked>
                 日本の政府機関（厚生労働省・内閣官房など）
               </Checkbox>
