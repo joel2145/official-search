@@ -5,6 +5,8 @@ import {
   Button,
   Stack,
   Checkbox,
+  UnorderedList,
+  ListItem,
 } from '@chakra-ui/react'
 
 import classes from "./SearchPage.module.scss"
@@ -63,18 +65,26 @@ export const SearchPage = () => {
               <Button onClick={() => submit()} colorScheme='blue' size='md' marginBottom="10" className={classes.submitButton}>検索</Button>
             </div>
 
-            {/* <p className={classes.selectText} >種類を選択</p> */}
-            <Stack spacing={5} direction='column' className={classes.checkList}>
-              <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked>
+
+            <Stack spacing={2} direction='column' className={classes.checkList}>
+              <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked >
                 日本の政府機関（厚生労働省・内閣官房など）
               </Checkbox>
-              <Checkbox colorScheme='green' onChange={acChange} value="ac.jp" id="ac" defaultChecked>
+              <Checkbox colorScheme='green' onChange={acChange} value="ac.jp" id="ac" defaultChecked >
                 日本の高等教育機関（大学など）
               </Checkbox>
-              <Checkbox colorScheme='green' onChange={lgChange} value="lg.jp" id="lg" defaultChecked>
+              <Checkbox colorScheme='green' onChange={lgChange} value="lg.jp" id="lg" defaultChecked >
                 地方公共団体
               </Checkbox>
             </Stack>
+
+            {/* 説明文*/}
+            <UnorderedList className={classes.description}>
+              <ListItem className={classes.text}>アフィリエイトや個人ブログ、企業のサイトなどは検索されません。</ListItem>
+              <ListItem className={classes.text}>保証することはできかねます。判断は自己責任でお願いします</ListItem>
+              <ListItem className={classes.text}>ドメインを指定して検索することによってフィルタリングをかけています。</ListItem>
+            </UnorderedList>
+
           </FormControl>
 
         </div>

@@ -49,19 +49,22 @@
   margin-left: 5px;
 }
 
-.selectText {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
 .checkList {
   display: flex;
   width: 100%;
   justify-content: center;
   text-align: center;
   margin-left: 50%;
+}
+.checkbox {
+  margin-bottom: 3px;
+}
+
+.description {
+  margin-top: 50px;
+  width: 50%;
+}
+.text {
+  font-size: 12px;
+  margin-bottom: 3px;
 }
