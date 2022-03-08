@@ -47,7 +47,7 @@ export const SearchPage = () => {
   }
 
   const submit = () => {
-    window.open(`https://www.google.com/search?q=${ac}${go}${lg}+${searchWord}`, '_blank');
+    window.open(`https://www.google.com/search?q=${go}${ac}${lg}+${searchWord}`, '_blank');
   }
 
   return (
