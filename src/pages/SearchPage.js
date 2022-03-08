@@ -56,7 +56,7 @@ export const SearchPage = () => {
         <div className={classes.box}>
           <FormControl className={classes.contents}>
             <h1 className={classes.title}>Official Search App</h1>
-            <p className={classes.subtitle}>信頼できる情報のみを検索できるアプリ</p>
+            <p className={classes.subtitle}>信頼できる公式情報のみを検索できるアプリ</p>
             <Input id='searchWord' type='search' placeholder='例) ウクライナ' size='md' value={searchWord} onChange={searchWordChange} className={classes.textBox} />
 
             <Button onClick={() => submit()} colorScheme='blue' size='md' marginTop="2" marginBottom="10" className={classes.submitButton}>検索</Button>
