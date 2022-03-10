@@ -38,7 +38,7 @@
   text-align: center;
   margin-bottom: 30px;
   @media screen and (max-width: 480px) {
-    /* 959px以下に適用されるCSS（スマホ用） */
+    /* （スマホ用） */
     font-size: 14px;
   }
 }
@@ -64,13 +64,19 @@
   text-align: center;
   margin-left: 50%;
   @media screen and (max-width: 959px) {
-    /* 959px以下に適用されるCSS（タブレット用） */
+    /* （タブレット用） */
     margin-left: 30%;
   }
+  @media screen and (max-width: 480px) {
+    /* (スマホ用） */
+    margin-top: 20px;
+    margin-left: 20%;
+  }
 }
+
 .checkBox :nth-child(3) {
   @media screen and (max-width: 480px) {
-    /* 959px以下に適用されるCSS（スマホ用） */
+    /* (スマホ用） */
     font-size: 14px;
   }
 }
@@ -78,6 +84,11 @@
 .description {
   margin-top: 50px;
   width: 60%;
+  @media screen and (max-width: 480px) {
+    /* (スマホ用） */
+    margin-top: 50px;
+    width: 80%;
+  }
 }
 .text {
   font-size: 12px;
