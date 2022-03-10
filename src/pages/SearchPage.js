@@ -61,7 +61,7 @@ export const SearchPage = () => {
             <p className={classes.subtitle}>信頼できる公式情報のみを検索できるアプリ</p>
 
             <div className={classes.searchArea}>
-              <Input id='searchWord' type='search' placeholder='例) ウクライナ' size='md' value={searchWord} onChange={searchWordChange} className={classes.textBox} />
+              <Input id='searchWord' type='search' placeholder='例) ウクライナ　新型コロナウイルス' size='md' value={searchWord} onChange={searchWordChange} className={classes.textBox} />
               <Button onClick={() => submit()} colorScheme='blue' size='md' marginBottom="10" className={classes.submitButton}>検索</Button>
             </div>
 
@@ -81,7 +81,7 @@ export const SearchPage = () => {
             {/* 説明文*/}
             <UnorderedList className={classes.description}>
               <ListItem className={classes.text}>アフィリエイトや個人ブログ、企業のサイトなどは検索されません。</ListItem>
-              <ListItem className={classes.text}>保証することはできかねます。判断は自己責任でお願いします</ListItem>
+              <ListItem className={classes.text}>信頼できることを保証することはできかねます。判断は自己責任でお願いします。</ListItem>
               <ListItem className={classes.text}>ドメインを指定して検索することによってフィルタリングをかけています。</ListItem>
             </UnorderedList>
 
