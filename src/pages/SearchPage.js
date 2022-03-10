@@ -71,13 +71,13 @@ export const SearchPage = () => {
 
 
             <Stack spacing={2} direction='column' className={classes.checkList}>
-              <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked className={classes.checkBox}>
+              <Checkbox colorScheme='blue' onChange={goChange} value="go.jp" id="go" defaultChecked className={classes.checkBox}>
                 日本の政府機関（厚生労働省など）
               </Checkbox>
-              <Checkbox colorScheme='green' onChange={acChange} value="ac.jp" id="ac" defaultChecked className={classes.checkBox}>
+              <Checkbox colorScheme='blue' onChange={acChange} value="ac.jp" id="ac" defaultChecked className={classes.checkBox}>
                 日本の高等教育機関（大学など）
               </Checkbox>
-              <Checkbox colorScheme='green' onChange={lgChange} value="lg.jp" id="lg" defaultChecked className={classes.checkBox}>
+              <Checkbox colorScheme='blue' onChange={lgChange} value="lg.jp" id="lg" defaultChecked className={classes.checkBox}>
                 地方公共団体
               </Checkbox>
             </Stack>
