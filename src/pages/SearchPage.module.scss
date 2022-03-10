@@ -12,6 +12,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 480px) {
+    /* （スマホ用） */
+    width: 80%;
+  }
 }
 
 .contents {
@@ -33,6 +37,10 @@
   justify-content: center;
   text-align: center;
   margin-bottom: 30px;
+  @media screen and (max-width: 480px) {
+    /* 959px以下に適用されるCSS（スマホ用） */
+    font-size: 14px;
+  }
 }
 
 .searchArea {
@@ -58,6 +66,12 @@
   @media screen and (max-width: 959px) {
     /* 959px以下に適用されるCSS（タブレット用） */
     margin-left: 30%;
+  }
+}
+.checkBox :nth-child(3) {
+  @media screen and (max-width: 480px) {
+    /* 959px以下に適用されるCSS（スマホ用） */
+    font-size: 14px;
   }
 }
 

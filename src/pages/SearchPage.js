@@ -16,11 +16,10 @@ import {
 import classes from "./SearchPage.module.scss"
 
 export const SearchPage = () => {
-  const breakpointValue = useBreakpointValue(["base", "sm", "md", "lg"])
+  useBreakpointValue(["base", "sm", "md", "lg"])
 
   const [searchWord, setSearchWord] = useState('')
 
-  // const [url, setUrl] = useState(`https://www.google.com/search?q=site%3Aac.jp+OR+site%3Ago.jp+OR+site%3Alg.jp+${searchWord}`)
   const [go, setGo] = useState("+OR+site%3Ago.jp")
   const [ac, setAc] = useState("+OR+site%3Aac.jp")
   const [lg, setLg] = useState("+OR+site%3Alg.jp")
@@ -63,22 +62,22 @@ export const SearchPage = () => {
         <div className={classes.box}>
           <FormControl className={classes.contents}>
             <h1 className={classes.title}>Official Search App</h1>
-            <p className={classes.subtitle}>信頼できる公式情報のみを検索できるアプリ</p>
+            <p className={classes.subtitle}>信頼できる公式情報を検索できるアプリ</p>
 
             <div className={classes.searchArea}>
-              <Input id='searchWord' type='search' placeholder='例) ウクライナ　新型コロナウイルス' size='md' value={searchWord} onChange={searchWordChange} className={classes.textBox} />
+              <Input id='searchWord' type='search' placeholder='例) ウクライナ　' size='md' value={searchWord} onChange={searchWordChange} className={classes.textBox} />
               <Button onClick={() => submit()} colorScheme='blue' size='md' marginBottom="10" className={classes.submitButton}>検索</Button>
             </div>
 
 
             <Stack spacing={2} direction='column' className={classes.checkList}>
-              <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked bg={["red.200", "yellow.200", "green.200", "blue.200"]}>
+              <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked className={classes.checkBox}>
                 日本の政府機関（厚生労働省など）
               </Checkbox>
-              <Checkbox colorScheme='green' onChange={acChange} value="ac.jp" id="ac" defaultChecked >
+              <Checkbox colorScheme='green' onChange={acChange} value="ac.jp" id="ac" defaultChecked className={classes.checkBox}>
                 日本の高等教育機関（大学など）
               </Checkbox>
-              <Checkbox colorScheme='green' onChange={lgChange} value="lg.jp" id="lg" defaultChecked >
+              <Checkbox colorScheme='green' onChange={lgChange} value="lg.jp" id="lg" defaultChecked className={classes.checkBox}>
                 地方公共団体
               </Checkbox>
             </Stack>
