@@ -7,11 +7,16 @@ import {
   Checkbox,
   UnorderedList,
   ListItem,
+  useBreakpointValue
 } from '@chakra-ui/react'
+
+
+
 
 import classes from "./SearchPage.module.scss"
 
 export const SearchPage = () => {
+  const breakpointValue = useBreakpointValue(["base", "sm", "md", "lg"])
 
   const [searchWord, setSearchWord] = useState('')
 
@@ -54,7 +59,7 @@ export const SearchPage = () => {
 
   return (
     <>
-      <div className={classes.container}>
+      <div className={classes.container} >
         <div className={classes.box}>
           <FormControl className={classes.contents}>
             <h1 className={classes.title}>Official Search App</h1>
@@ -67,8 +72,8 @@ export const SearchPage = () => {
 
 
             <Stack spacing={2} direction='column' className={classes.checkList}>
-              <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked >
-                日本の政府機関（厚生労働省・内閣官房など）
+              <Checkbox colorScheme='green' onChange={goChange} value="go.jp" id="go" defaultChecked bg={["red.200", "yellow.200", "green.200", "blue.200"]}>
+                日本の政府機関（厚生労働省など）
               </Checkbox>
               <Checkbox colorScheme='green' onChange={acChange} value="ac.jp" id="ac" defaultChecked >
                 日本の高等教育機関（大学など）
