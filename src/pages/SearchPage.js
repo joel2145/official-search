@@ -70,6 +70,7 @@ export const SearchPage = () => {
             </div>
 
 
+            <p className={classes.selectText}>選択してください</p>
             <Stack spacing={2} direction='column' className={classes.checkList}>
               <Checkbox colorScheme='blue' onChange={goChange} value="go.jp" id="go" defaultChecked className={classes.checkBox}>
                 日本の政府機関（厚生労働省など）

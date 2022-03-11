@@ -57,6 +57,10 @@
   margin-left: 5px;
 }
 
+.selectText {
+  font-size: 14px;
+  margin-bottom: 1px;
+}
 .checkList {
   display: flex;
   width: 100%;
@@ -69,7 +73,7 @@
   }
   @media screen and (max-width: 480px) {
     /* (スマホ用） */
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 20%;
   }
 }
